@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Copilot 開發實戰：10個系統挑戰清單</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .copilot-badge {
+            background: linear-gradient(90deg, #4f46e5, #9333ea);
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-slate-800 mb-4">
+                <i class="fa-solid fa-code text-indigo-600"></i> Copilot + VS Code 開發挑戰
+            </h1>
+            <p class="text-slate-600 text-lg">透過這 9 個系統，從基礎 CRUD 進化到 AI 整合與系統架構設計。</p>
+        </header>
+
+        <!-- Project Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- System 0: Invoice Recognition (New) -->
+            <div class="card bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-3xl">🧾</span>
+                        <span class="copilot-badge">進階核心</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">自動化發票辨識記帳系統</h2>
+                    <p class="text-slate-600 text-sm mb-4">使用 OCR 技術自動提取發票數據並存入資料庫。</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="text-xs font-semibold text-indigo-600 uppercase">核心功能</div>
+                        <p class="text-xs text-slate-500">影像預處理、Tesseract OCR/Google Vision API 串接、Regex 數據清洗。</p>
+                    </div>
+                </div>
+                <div class="bg-indigo-50 p-3 rounded-lg mt-4">
+                    <p class="text-xs text-indigo-700 font-bold mb-1"><i class="fa-solid fa-lightbulb"></i> Copilot 練習點：</p>
+                    <p class="text-xs text-indigo-600">讓 Copilot 生成處理複雜發票格式的正規表示式 (Regex)，並協助撰寫影像轉灰階的代碼。</p>
+                </div>
+            </div>
+
+            <!-- System 1: Beverage -->
+            <div class="card bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-3xl">🧋</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">智慧辦公室飲料訂購系統</h2>
+                    <p class="text-slate-600 text-sm mb-4">解決公司內部揪團痛點，自動計算金額與提醒。</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="text-xs font-semibold text-indigo-600 uppercase">核心功能</div>
+                        <p class="text-xs text-slate-500">多店同時訂購、自動分帳、Line Notify 提醒、熱門品項統計。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-3 rounded-lg mt-4">
+                    <p class="text-xs text-slate-700 font-bold mb-1"><i class="fa-solid fa-terminal"></i> Copilot 練習點：</p>
+                    <p class="text-xs text-slate-600">使用 @workspace 詢問如何設計多對多的資料庫 Schema (User/Order/Item)。</p>
+                </div>
+                <a href="https://ecfmetest.fme.com.tw/order" target="_blank" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition">訂購系統</a></div>
+
+            <!-- System 2: Rental -->
+            <div class="card bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-3xl">📷</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">共享器材租賃管理平台</h2>
+                    <p class="text-slate-600 text-sm mb-4">攝影器材或空間預約，整合 IoT 電子鎖。</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="text-xs font-semibold text-indigo-600 uppercase">核心功能</div>
+                        <p class="text-xs text-slate-500">即時日曆預約、自動租約生成、押金管理、損毀報修追蹤。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-3 rounded-lg mt-4">
+                    <p class="text-xs text-slate-700 font-bold mb-1"><i class="fa-solid fa-terminal"></i> Copilot 練習點：</p>
+                    <p class="text-xs text-slate-600">練習生成複雜的日曆 UI 邏輯與防止重複預約的後端檢查程序。</p>
+                </div>
+                <a href="https://rental-platform-ruby.vercel.app/" target="_blank" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition">租賃平台</a>
+            </div>
+
+            <!-- System 3: Health -->
+            <div class="card bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-3xl">🥗</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">個人化健康餐飲與卡路里</h2>
+                    <p class="text-slate-600 text-sm mb-4">自動食譜推薦與目標追蹤系統。</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="text-xs font-semibold text-indigo-600 uppercase">核心功能</div>
+                        <p class="text-xs text-slate-500">拍照辨識食物營養、目標體重設定、食譜與店家 API 串接。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-3 rounded-lg mt-4">
+                    <p class="text-xs text-slate-700 font-bold mb-1"><i class="fa-solid fa-terminal"></i> Copilot 練習點：</p>
+                    <p class="text-xs text-slate-600">練習使用 Copilot 生成用於資料分析的計算演算法 (BMR/TDEE)。</p>
+                </div>
+                <a href="https://graceful-empanada-c874a3.netlify.app/" target="_blank" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition">健康餐飲系統</a>
+            </div>
+
+            <!-- System 4: Matchmaking -->
+            <div class="card bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-3xl">🔧</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">專業職人媒合評價系統</h2>
+                    <p class="text-slate-600 text-sm mb-4">水電、清潔等服務的地域性媒合平台。</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="text-xs font-semibold text-indigo-600 uppercase">核心功能</div>
+                        <p class="text-xs text-slate-500">地圖定位服務、雙向評價體系、即時聊天室、訂金託管。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-3 rounded-lg mt-4">
+                    <p class="text-xs text-slate-700 font-bold mb-1"><i class="fa-solid fa-terminal"></i> Copilot 練習點：</p>
+                    <p class="text-xs text-slate-600">詢問 @workspace 如何整合 Google Maps API 進行經緯度距離計算。</p>
+                </div>
+            </div>
+
+            <!-- System 5: Fitting Room -->
+            <div class="card bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-3xl">👕</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">虛擬穿搭建議工具</h2>
+                    <p class="text-slate-600 text-sm mb-4">結合氣象與 AI 的智慧衣櫥建議。</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="text-xs font-semibold text-indigo-600 uppercase">核心功能</div>
+                        <p class="text-xs text-slate-500">衣物照片上傳、天氣 API 串接、根據氣溫生成的 AI 建議。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-3 rounded-lg mt-4">
+                    <p class="text-xs text-slate-700 font-bold mb-1"><i class="fa-solid fa-terminal"></i> Copilot 練習點：</p>
+                    <p class="text-xs text-slate-600">讓 Copilot 編寫向 LLM API 發送的 Prompt Template (如：根據 15度 推薦穿搭)。</p>
+                </div>
+            </div>
+
+            <!-- System 6: Books -->
+            <div class="card bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-3xl">📚</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">二手書與筆記交易平台</h2>
+                    <p class="text-slate-600 text-sm mb-4">針對校園市場的數位筆記保護與交易系統。</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="text-xs font-semibold text-indigo-600 uppercase">核心功能</div>
+                        <p class="text-xs text-slate-500">ISBN 掃描自動帶入資訊、浮水印保護技術、系所分類搜尋。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-3 rounded-lg mt-4">
+                    <p class="text-xs text-slate-700 font-bold mb-1"><i class="fa-solid fa-terminal"></i> Copilot 練習點：</p>
+                    <p class="text-xs text-slate-600">練習實作 PDF 預覽與動態浮水印添加的 Canvas 代碼。</p>
+                </div>
+            </div>
+
+            <!-- System 7: Community -->
+            <div class="card bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-3xl">🏢</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">智慧社區物聯管理系統</h2>
+                    <p class="text-slate-600 text-sm mb-4">解決社區溝通與繳費不便的數位化工具。</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="text-xs font-semibold text-indigo-600 uppercase">核心功能</div>
+                        <p class="text-xs text-slate-500">數位投票系統、公設預約、包裹通知、管理費線上支付。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-3 rounded-lg mt-4">
+                    <p class="text-xs text-slate-700 font-bold mb-1"><i class="fa-solid fa-terminal"></i> Copilot 練習點：</p>
+                    <p class="text-xs text-slate-600">詢問如何設計一個具備防弊機率的匿名投票統計邏輯。</p>
+                </div>
+            </div>
+
+            <!-- System 8: Pet -->
+            <div class="card bg-white p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-3xl">🐱</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">寵物健康管理與異狀監測</h2>
+                    <p class="text-slate-600 text-sm mb-4">記錄生活數據並提供異常報警功能。</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="text-xs font-semibold text-indigo-600 uppercase">核心功能</div>
+                        <p class="text-xs text-slate-500">項圈數據整合、飲食排泄記錄、獸醫預約、異常警報。</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-3 rounded-lg mt-4">
+                    <p class="text-xs text-slate-700 font-bold mb-1"><i class="fa-solid fa-terminal"></i> Copilot 練習點：</p>
+                    <p class="text-xs text-slate-600">讓 Copilot 用 Chart.js 寫出動態顯示寵物活動量趨勢圖表的元件。</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 text-sm">
+            <p>使用 GitHub Copilot 時，記得多嘗試 <strong>Ctrl+I</strong> (Inline Chat) 與 <strong>/tests</strong> 指令。</p>
+            <p class="mt-2">&copy; 2024 開發者實戰指南 - 祝程式碼永無 Bug</p>
+        </footer>
+    </div>
+</body>
+</html>
